@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OPTIK — Full-spectrum creative direction</title>
+<meta name="description" content="OPTIK is a full-service creative studio based in Nashville, TN. We specialize in transforming complex business challenges into clear, scalable experiences." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1L2 6L7 11" stroke="#1e1e1e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo-word">OPTIK</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Full-spectrum<br />creative direction</h1>
+        <p class="hero-copy"><strong>OPTIK</strong> is a full-service creative studio based in Nashville, TN. We specialize in transforming complex business challenges into clear, scalable experiences.</p>
+        <a href="#contact" class="btn">Contact</a>
+      </div>
+    </section>
+
+    <section class="services" aria-label="Services">
+      <div class="service">
+        <span class="dot" aria-hidden="true"></span>
+        <h3>Strategy &amp; Creative Direction</h3>
+        <p>Defining your brand's North Star and guiding the big picture from concept to completion.</p>
+      </div>
+      <div class="service">
+        <span class="dot" aria-hidden="true"></span>
+        <h3>UX &amp; Product Design</h3>
+        <p>Translating operational requirements into clean, scalable, and intuitive digital interfaces.</p>
+      </div>
+      <div class="service">
+        <span class="dot" aria-hidden="true"></span>
+        <h3>Photo and Film</h3>
+        <p>Capturing high-impact visual stories that elevate your brand and move your audience.</p>
+      </div>
+      <div class="service">
+        <span class="dot" aria-hidden="true"></span>
+        <h3>Copywriting</h3>
+        <p>Sharp, on-brand messaging that turns complex ideas into words people actually read.</p>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="watermark" aria-hidden="true">OPTIK</div>
+      <div class="cta-content">
+        <h2>Let's build something clear.</h2>
+        <a href="mailto:hello@optikco.com" class="btn">hello@optikco.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>&copy; <span id="year"></span> OPTIK. All rights reserved.</span>
+    <span>Nashville, TN</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
