@@ -1,6 +1,7 @@
 :root {
   --bg: #000000;
-  --text: #f3f3f3;
+  --text: #7c8190;
+  --text2: #ffffff;
   --text-muted: #b3b3b3;
   --grad-1: #6440f9;
   --grad-2: #ff00a5;
@@ -32,6 +33,18 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   padding: 20px 26px;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
@@ -52,6 +65,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.02em;
+  color: var(--text2);
 }
 
 /* Hero */
@@ -65,21 +79,21 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
-.hero-bg {
+.hero2-bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(60% 50% at 78% 22%, rgba(100, 64, 249, 0.20), transparent 60%),
-    radial-gradient(55% 45% at 88% 55%, rgba(255, 0, 165, 0.16), transparent 60%),
-    linear-gradient(180deg, rgba(0,0,0,0) 68%, #000000 100%),
-    url("assets/hero_bg.jpg");
+    radial-gradient(60% 50% at 78% 22%, rgba(100, 64, 249, 0.20), transparent 90%),
+    radial-gradient(55% 45% at 88% 55%, rgba(255, 0, 165, 0.16), transparent 90%),
+    linear-gradient(-90deg, rgba(20, 146, 174, 0.6) 28%, #53029e 100%),
+    url("assets/hero2-bg.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 1;
+  opacity: .3;
   z-index: -1;
 }
 
-.hero-bg::after {
+.hero2-bg::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -94,7 +108,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-title {
-  font-size: clamp(40px, 7vw, 96px);
+  font-size: clamp(86px, 7vw, 96px);
   font-weight: 800;
   line-height: 1.02;
   letter-spacing: -0.02em;
@@ -103,13 +117,18 @@ a { color: inherit; text-decoration: none; }
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  white-space: nowrap;
+}
+
+.hero-title .break-mobile {
+  display: none;
 }
 
 .hero-copy {
   max-width: 420px;
   font-size: 16px;
   line-height: 1.4;
-  color: var(--text);
+  color: var(--text2);
   margin: 0 0 32px;
 }
 
@@ -161,12 +180,14 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   line-height: 1.36;
   letter-spacing: -0.02em;
+  color: var(--text2);
   margin: 0 0 8px;
 }
 
 .service p {
   font-size: 16px;
   line-height: 1.4;
+  font-weight: 300;
   color: var(--text);
   margin: 0;
   max-width: 265px;
@@ -229,5 +250,11 @@ a { color: inherit; text-decoration: none; }
   }
   .hero {
     padding-top: 100px;
+  }
+  .hero-title {
+    font-size: clamp(32px, 16vw, 86px);
+  }
+  .hero-title .break-mobile {
+    display: inline;
   }
 }

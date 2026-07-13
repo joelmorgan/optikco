@@ -7,7 +7,7 @@
 <meta name="description" content="OPTIK is a full-service creative studio based in Nashville, TN. We specialize in transforming complex business challenges into clear, scalable experiences." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -23,9 +23,9 @@
 
   <main>
     <section class="hero" id="top">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero2-bg" aria-hidden="true"></div>
       <div class="hero-content">
-        <h1 class="hero-title">Full-spectrum<br />creative</h1>
+        <h1 class="hero-title">Full-<br class="break-mobile" />Spectrum<br />Creative</h1>
         <p class="hero-copy"><strong>OPTIK</strong> is a full-service creative studio based in Nashville, TN. We specialize in transforming complex business challenges into clear, scalable experiences.</p>
         <a href="mailto:hello.optik@gmail.com" class="btn">Contact</a>
       </div>
@@ -84,6 +84,11 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const nav = document.querySelector('.nav');
+    const toggleNavGlass = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+    toggleNavGlass();
+    window.addEventListener('scroll', toggleNavGlass, { passive: true });
   </script>
 </body>
 </html>
